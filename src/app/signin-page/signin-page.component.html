@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div style="text-align: center">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <form class="example-form">
+                    <img src="/assets/images/KPT.jpg" height="15%" width="120px" /><br /><br />
+                    <mat-form-field appearance="outline" color="accent" style="width: 235px !important">
+                        <mat-label>Enter your name </mat-label>
+                        <input name="name" matInput placeholder="SANGU LAVAKUMAR" required />
+                        <mat-hint>Min 5 characters</mat-hint>
+                    </mat-form-field><br />
+                    <mat-form-field appearance="outline" style="width: 235px !important">
+                        <mat-label>Enter your email
+                            <mat-icon>email</mat-icon>
+                        </mat-label>
+                        <input name="email" matInput placeholder="pat@example.com" required /> </mat-form-field><br />
+                    <mat-form-field appearance="outline" style="width: 235px !important">
+                        <mat-label>Contact No
+                            <mat-icon>phone_android</mat-icon>
+                        </mat-label>
+                        <input name="mobno" matInput placeholder="9876543210" required /> </mat-form-field><br />
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter your password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" />
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button> </mat-form-field><br />
+                    <button mat-raised-button color="primary">
+            <i>Login</i><mat-icon>login</mat-icon>
+          </button>
+                </form>
+            </mat-card-header>
+        </mat-card>
+    </div>
+</div>

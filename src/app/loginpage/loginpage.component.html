@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div style="text-align: center">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <form class="example-form">
+                    <img src="/assets/images/KPT.jpg" height="20%" width="120px" /><br /><br />
+                    <mat-form-field appearance="fill" style="width: 235px !important">
+                        <mat-label>Enter your email
+                            <mat-icon>email</mat-icon>
+                        </mat-label>
+                        <input [(ngModel)]="name" name="name" matInput placeholder="pat@example.com" required /> </mat-form-field><br /><br />
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter your password</mat-label>
+                        <input [(ngModel)]="passwords" name="passwords" matInput [type]="hide ? 'password' : 'text'" />
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button> </mat-form-field><br /><br />
+                    <button mat-raised-button color="accent" (click)="updateText()">
+            <i>Add</i><mat-icon>add</mat-icon>
+          </button>
+                </form>
+            </mat-card-header>
+        </mat-card>
+    </div>
+</div>
